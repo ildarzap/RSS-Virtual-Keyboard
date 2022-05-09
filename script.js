@@ -1,7 +1,7 @@
 const body = document.querySelector('body');
 body.insertAdjacentHTML(
   'afterbegin',
-  ' <div class="container"> <textarea class="textarea" autofocus cols="30" rows="10"></textarea> <div class="keyboard"> <div class="row"> <div class="key">`</div><div class="key">1</div><div class="key">2</div><div class="key">3</div><div class="key">4</div><div class="key">5</div><div class="key">6</div><div class="key">7</div><div class="key">8</div><div class="key">9</div><div class="key">0</div><div class="key">-</div><div class="key">=</div><div class="key key--backspace key--service">Backspace</div></div><div class="row"> <div class="key key--tab key--service">Tab</div><div class="key">q</div><div class="key">w</div><div class="key">e</div><div class="key">r</div><div class="key">t</div><div class="key">y</div><div class="key">u</div><div class="key">i</div><div class="key">o</div><div class="key">p</div><div class="key">[</div><div class="key">]</div><div class="key">\\</div><div class="key key--del key--service">Del</div></div><div class="row"> <div class="key key--caps-lock key--service">Caps Lock</div><div class="key">a</div><div class="key">s</div><div class="key">d</div><div class="key">f</div><div class="key">g</div><div class="key">h</div><div class="key">j</div><div class="key">k</div><div class="key">l</div><div class="key">;</div><div class="key">\'</div><div class="key key--enter key--service">Enter</div></div><div class="row"> <div class="key key--shift key--shift-left key--service">Shift</div><div class="key">z</div><div class="key">x</div><div class="key">c</div><div class="key">v</div><div class="key">b</div><div class="key">n</div><div class="key">m</div><div class="key">,</div><div class="key">.</div><div class="key">/</div><div class="key key--up">▲</div><div class="key key--shift key--shift-right key--service key--service">Shift</div></div><div class="row"> <div class="key key--ctrl-left key--service">Ctrl</div><div class="key key--win key--service">Win</div><div class="key key--alt-left key--service">Alt</div><div class="key key--space"></div><div class="key key--alt-right key--service">Alt</div><div class="key key--left">◄</div><div class="key key--down">▼</div><div class="key key--right">►</div><div class="key key--ctrl-right key--service">Ctrl</div></div></div><div class="description"> <h2>Keyboard created in Windows OS</h2> <h2>Combination for language switch : left Ctrl + Alt</h2> </div></div>',
+  '<div class="container"> <textarea class="textarea" autofocus cols="30" rows="10"></textarea> <div class="keyboard"> <div class="row"> <div class="key" ruKeyName="ё">`</div><div class="key">1</div><div class="key">2</div><div class="key">3</div><div class="key">4</div><div class="key">5</div><div class="key">6</div><div class="key">7</div><div class="key">8</div><div class="key">9</div><div class="key">0</div><div class="key">-</div><div class="key">=</div><div class="key key--backspace key--service">Backspace</div></div><div class="row"> <div class="key key--tab key--service">Tab</div><div class="key" ruKeyName="й">q</div><div class="key" ruKeyName="ц">w</div><div class="key" ruKeyName="у">e</div><div class="key" ruKeyName="к">r</div><div class="key" ruKeyName="е">t</div><div class="key" ruKeyName="н">y</div><div class="key" ruKeyName="г">u</div><div class="key" ruKeyName="ш">i</div><div class="key" ruKeyName="щ">o</div><div class="key" ruKeyName="з">p</div><div class="key" ruKeyName="х">[</div><div class="key" ruKeyName="ъ">]</div><div class="key">\\</div><div class="key key--del key--service">Del</div></div><div class="row"> <div class="key key--caps-lock key--service">Caps Lock</div><div class="key" ruKeyName="ф">a</div><div class="key" ruKeyName="ы">s</div><div class="key" ruKeyName="в">d</div><div class="key" ruKeyName="а">f</div><div class="key" ruKeyName="п">g</div><div class="key" ruKeyName="р">h</div><div class="key" ruKeyName="о">j</div><div class="key" ruKeyName="л">k</div><div class="key" ruKeyName="д">l</div><div class="key" ruKeyName="ж">;</div><div class="key" ruKeyName="э">\'</div><div class="key key--enter key--service">Enter</div></div><div class="row"> <div class="key key--shift key--shift-left key--service">Shift</div><div class="key" ruKeyName="я">z</div><div class="key" ruKeyName="ч">x</div><div class="key" ruKeyName="с">c</div><div class="key" ruKeyName="м">v</div><div class="key" ruKeyName="и">b</div><div class="key" ruKeyName="т">n</div><div class="key" ruKeyName="ь">m</div><div class="key" ruKeyName="б">,</div><div class="key" ruKeyName="ю">.</div><div class="key" ruKeyName=".">/</div><div class="key key--up">▲</div><div class="key key--shift key--shift-right key--service key--service">Shift</div></div><div class="row"> <div class="key key--ctrl-left key--service">Ctrl</div><div class="key key--win key--service">Win</div><div class="key key--alt-left key--service">Alt</div><div class="key key--space"></div><div class="key key--alt-right key--service">Alt</div><div class="key key--left">◄</div><div class="key key--down">▼</div><div class="key key--right">►</div><div class="key key--ctrl-right key--service">Ctrl</div></div></div><div class="description"> <h2>Keyboard created in Windows OS</h2> <h2>Combination for language switch : left Ctrl + Alt</h2> </div></div>',
 );
 
 const keys = document.querySelectorAll('.key');
@@ -32,7 +32,7 @@ for (let i = 0; i < keys.length; i += 1) {
 document.addEventListener('keydown', (e) => {
   textArea.focus();
   for (let i = 0; i < keys.length; i += 1) {
-    if (e.key === keys[i].getAttribute('keyname') || e.key === keys[i].getAttribute('upperCaseName')) {
+    if (e.key === keys[i].getAttribute('keyname')) {
       keys[i].classList.add('active');
     }
   }
@@ -118,6 +118,14 @@ document.addEventListener('keydown', (e) => {
       keyWin.classList.remove('active');
     }, 500);
   }
+
+  if (e.ctrlKey && e.altKey) {
+    for (let i = 0; i < keys.length; i += 1) {
+      if (keys[i].hasAttribute('ruKeyName')) {
+        keys[i].textContent = keys[i].getAttribute('ruKeyName');
+      }
+    }
+  }
 });
 window.addEventListener('keyup', (e) => {
   for (let i = 0; i < keys.length; i += 1) {
@@ -181,6 +189,7 @@ for (let i = 0; i < keys.length; i += 1) {
       textArea.selectionStart = start;
       textArea.selectionEnd = end + 1;
     }
+
     if (keys[i].classList.contains('key--space')) {
       const start = textArea.selectionStart;
       const end = textArea.selectionEnd;
@@ -188,9 +197,26 @@ for (let i = 0; i < keys.length; i += 1) {
       textArea.selectionEnd = start + 1;
       textArea.selectionStart = textArea.selectionEnd;
     }
+    if (keys[i].getAttribute('keyname') === 'Caps Lock') {
+      capsLockKey.classList.add('active');
+      for (let index = 0; index < keys.length; index += 1) {
+        if (keys[index].hasAttribute('upperCaseName')) {
+          keys[index].textContent = keys[index].getAttribute('upperCaseName');
+        }
+      }
+      if (!capsLockKey.classList.contains('active')) {
+        for (let index = 0; index < keys.length; index += 1) {
+          if (keys[index].hasAttribute('upperCaseName')) {
+            keys[index].textContent = keys[index].getAttribute('keyName');
+          }
+        }
+      }
+    }
   });
 
   keys[i].addEventListener('mouseup', () => {
-    keys[i].classList.remove('active');
+    if (keys[i].getAttribute('keyname') !== 'Caps Lock') {
+      keys[i].classList.remove('active');
+    }
   });
 }
