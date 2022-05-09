@@ -17,6 +17,7 @@ body {
 }
 .textarea {
   font-family: Montserrat;
+  font-weight: 500;
   display: block;
   width: 1000px;
   height: 400px;
@@ -26,6 +27,7 @@ body {
   resize: none;
   background-color: #fafaff;
   color: #30343f;
+  border-radius: 4px;
   box-shadow: inset 2px 2px 16px rgba(255, 255, 255, 0.9),
     inset 8px 8px 9px rgba(0, 0, 0, 0.2), 5px 10px 5px rgba(0, 0, 0, 0.03),
     -5px -5px 25px rgba(255, 255, 255, 0.1),
@@ -52,6 +54,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
   color: #30343f;
   margin: 4px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2), 5px 10px 35px rgba(0, 0, 0, 0.1),
@@ -62,7 +65,7 @@ body {
     -5px -5px 15px rgba(255, 255, 255, 0.9);
   cursor: pointer;
   user-select: none;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .key:hover {
@@ -106,9 +109,10 @@ body {
   max-width: 528px;
   width: 100%;
 }
-.description {
+.description h2 {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 22px;
   font-weight: 300;
   font-style: italic;
+  text-align: center;
 }
